@@ -3,9 +3,21 @@ import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getFirestore } from "firebase/firestore/lite";
 import { getAuth } from "firebase/auth";
+import { getEnvironments } from "../helpers/getEnvironments";
+
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
+
+const {
+VITE_APIKEY,
+VITE_AUTHDOMAIN,
+VITE_PROJECTID,
+VITE_STORAGEBUCKET,
+VITE_MESSAGINGSENDERID,
+VITE_APPID,
+VITE_MEASUREMENTID,
+} = getEnvironments();
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -20,15 +32,26 @@ import { getAuth } from "firebase/auth";
 // };
 
 //testing
+// const firebaseConfig = {
+//   apiKey: "AIzaSyAu09xcrmkM6cFRoWObb10j0rAPK5F9RBY",
+//   authDomain: "journal-testing-9bef2.firebaseapp.com",
+//   projectId: "journal-testing-9bef2",
+//   storageBucket: "journal-testing-9bef2.firebasestorage.app",
+//   messagingSenderId: "617753255030",
+//   appId: "1:617753255030:web:a49c71c9c6dbee929ed357",
+//   measurementId: "G-ZKEEF5V7R5"
+// };
 const firebaseConfig = {
-  apiKey: "AIzaSyAu09xcrmkM6cFRoWObb10j0rAPK5F9RBY",
-  authDomain: "journal-testing-9bef2.firebaseapp.com",
-  projectId: "journal-testing-9bef2",
-  storageBucket: "journal-testing-9bef2.firebasestorage.app",
-  messagingSenderId: "617753255030",
-  appId: "1:617753255030:web:a49c71c9c6dbee929ed357",
-  measurementId: "G-ZKEEF5V7R5"
+  apiKey: VITE_APIKEY,
+  authDomain: VITE_AUTHDOMAIN,
+  projectId: VITE_PROJECTID,
+  storageBucket: VITE_STORAGEBUCKET,
+  messagingSenderId: VITE_MESSAGINGSENDERID,
+  appId: VITE_APPID,
+  measurementId: VITE_MEASUREMENTID
 };
+
+console.log(firebaseConfig)
 
 // Initialize Firebase
 export const Firebaseapp = initializeApp(firebaseConfig);
