@@ -19,7 +19,7 @@ export const startNewNote = () => {
         const newDoc = doc( collection( FirebaseDB, `${ uid }/journal/notes`));
         const setDocResp = await setDoc( newDoc, newNote );
 
-        console.log( {newDoc, setDocResp} );
+        
 
         // dispatch
 

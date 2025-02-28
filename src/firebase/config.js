@@ -9,14 +9,25 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// const firebaseConfig = {
+//   apiKey: "AIzaSyBiYTDMb6RPOa-k6S6pLFc8muizNyOZtVc",
+//   authDomain: "react-24c53.firebaseapp.com",
+//   projectId: "react-24c53",
+//   storageBucket: "react-24c53.firebasestorage.app",
+//   messagingSenderId: "738711921000",
+//   appId: "1:738711921000:web:dfffe82f190fae7beb76dd",
+//   measurementId: "G-5GM5KJWEHL"
+// };
+
+//testing
 const firebaseConfig = {
-  apiKey: "AIzaSyBiYTDMb6RPOa-k6S6pLFc8muizNyOZtVc",
-  authDomain: "react-24c53.firebaseapp.com",
-  projectId: "react-24c53",
-  storageBucket: "react-24c53.firebasestorage.app",
-  messagingSenderId: "738711921000",
-  appId: "1:738711921000:web:dfffe82f190fae7beb76dd",
-  measurementId: "G-5GM5KJWEHL"
+  apiKey: "AIzaSyAu09xcrmkM6cFRoWObb10j0rAPK5F9RBY",
+  authDomain: "journal-testing-9bef2.firebaseapp.com",
+  projectId: "journal-testing-9bef2",
+  storageBucket: "journal-testing-9bef2.firebasestorage.app",
+  messagingSenderId: "617753255030",
+  appId: "1:617753255030:web:a49c71c9c6dbee929ed357",
+  measurementId: "G-ZKEEF5V7R5"
 };
 
 // Initialize Firebase
